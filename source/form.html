@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cat Energy</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+  <header class="header">
+    <nav class="nav">
+      <a class="nav__link--logo" href="index.html">
+        <img class="nav__logo" width="34" height="38" src="../source/img/logo.svg" alt="Логотип главная">
+        <img class="nav__img" width="101" height="18" src="../source/img/logo-header.svg" alt="Логотип Кэт Энерджи">
+      </a>
+      <button class="nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </nav>
+
+    <ul class="nav__list">
+      <li сlass="nav__item">
+        <a class="nav__link" href="index.html">главная</a>
+      </li>
+      <li сlass="nav__item">
+        <a class="nav__link" href="catalog.html">каталог продукции</a>
+      </li>
+      <li сlass="nav__item">
+        <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">подбор программы</a>
+      </li>
+    </ul>
+  </header>
+
+  <main class="main__form">
+    <form class="program__form" action="submit" method="post">
+      <section class="program">
+        <h1 class="program__title">Подбор программы</h1>
+        <p class="program__guide">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+
+        <div class="questionnaire">
+          <div class="questionnaire__item">
+            <label class="questionnaire__label">
+              <span class="questionnaire__title">ИМЯ:*</span>
+              <input class="questionnaire__input" type="text" placeholder="барсик">
+            </label>
+
+            <label class="questionnaire__label">
+              <span class="questionnaire__title">Вес (кг):*</span>
+              <input class="questionnaire__input" type="text" placeholder="7">
+            </label>
+
+            <label class="questionnaire__label">
+              <span class="questionnaire__title">Возраст (лет):</span>
+              <input class="questionnaire__input" type="text" placeholder="7">
+            </label>
+          </div>
+
+          <div class="questionnaire__item">
+            <label class="questionnaire__label">
+              <input class="questionnaire__input" type="radio" checked>
+              <span class="questionnaire__title">похудение</span>
+            </label>
+
+            <label class="questionnaire__label">
+              <input class="questionnaire__input" type="radio">
+              <span class="questionnaire__title">Набор массы</span>
+            </label>
+
+            <label class="questionnaire__label">
+              <input class="questionnaire__input" type="radio">
+              <span class="questionnaire__title">Не знаю (Нужен ваш совет)</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="user__contacts">
+        <h2 class="user__contacts--title">Контактные данные (владельца кота)</h2>
+
+        <label class="user__contacts--label">
+          <span class="user__contacts--input-title">E-mail:*</span>
+          <input class="user__contacts--input" type="email" placeholder="кuklachev@gmail.com">
+        </label>
+
+        <label class="user__contacts--label">
+          <span class="user__contacts--input-title">Телефон:*</span>
+          <input class="user__contacts--input" type="tel" placeholder="8 (960) 900-60-90">
+        </label>
+      </section>
+
+      <section class="comments">
+        <h2 class="comments__title">Комментарий</h2>
+        <input class="comments__input" type="text" placeholder="Расскажите обо всех повадках кота">
+      </section>
+
+      <section class="additional__form">
+        <h2 class="additional__form--title">Дополнительно</h2>
+
+        <label class="additional__form--label">
+          <input class="additional__form--input" type="checkbox" checked>
+          <span class="additional__form--input-title">сахарозаменитель</span>
+        </label>
+
+        <label class="additional__form--label">
+          <input class="additional__form--input" type="checkbox">
+          <span class="additional__form--input-title">питьевая вода</span>
+        </label>
+
+        <label class="additional__form--label">
+          <input class="additional__form--input" type="checkbox">
+          <span class="additional__form--input-title">молоко</span>
+        </label>
+
+        <label class="additional__form--label">
+          <input class="additional__form--input" type="checkbox">
+          <span class="additional__form--input-title">витамины</span>
+        </label>
+
+        <button class="additional__form--button button" type="submit">
+          <span class="additional__form--button-text">отправить заявку</span>
+        </button>
+
+        <span class="additional__form--text">* — Обязательные поля</span>
+      </section>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <section class="contacts">
+      <p class="invite__dillers">приглашаем к сотрудничеству дилеров!</p>
+      <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    </section>
+
+    <img class="location__img" width="320" height="362" src="../source/img/location.png" alt="карта">
+
+    <div class="social__contacts">
+      <a class="footer__logo" href="index.html">
+        <img src="../source/img/logo-footer.svg" alt="Логотип Кэт Энерджи">
+      </a>
+
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link visually-hidden" href="#">VK</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link visually-hidden" href="#">Instagram</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link visually-hidden" href="#">Facebook</a>
+        </li>
+      </ul>
+
+      <div class="academy__links">
+        <a class="academy__link" href="">HTML Academy</a>
+        <a class="academy__link--img" href="#">
+          <img class="academy-img" width="27" height="34" src="../source/img/academy-logo.svg" alt="Логотип Академии">
+        </a>
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+</html>
