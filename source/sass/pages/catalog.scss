@@ -55,9 +55,9 @@
   position: relative;
   display: grid;
   grid-template-areas:
-  "image title"
-  "image spec"
-  "button button";
+    "image title"
+    "image spec"
+    "button button";
   grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 30px 0;
@@ -157,6 +157,7 @@
   font-size: 16px;
   line-height: 20px;
   margin-top: -15px;
+
   &:last-of-type {
     color: $charcoal;
   }
@@ -253,7 +254,6 @@
   @media (min-width: $desktop-width) {
     border-left: none;
     border-right: none;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
@@ -275,7 +275,6 @@
 .additional__title {
   font-size: 24px;
   line-height: 24px;
-
   position: relative;
   display: block;
   min-width: 378px;
@@ -327,7 +326,6 @@
   color: $dark-grey;
   font-family: $font-family-lato;
   line-height: 14px;
-
   display: flex;
   justify-content: space-between;
 
@@ -350,13 +348,10 @@
   justify-content: center;
   align-items: center;
   position: relative;
-
   min-width: 280px;
   min-height: 290px;
-
   text-align: center;
   color: #ffffff;
-
   background-image: url("../img/background/cat_bag.png");
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -375,7 +370,7 @@
   &::after {
     content: "";
     position: absolute;
-    background-color: rgba(104, 183, 56, 0.85);
+    background-color: rgb(104 183 56 / 85%);
     top: 0;
     left: 0;
     width: 100%;

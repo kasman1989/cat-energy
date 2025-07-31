@@ -18,7 +18,6 @@
     text-align: left;
     margin-left: 117px;
     min-height: 480px;
-
   }
 
   @media (min-width: $desktop-width) {
@@ -79,6 +78,7 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
+
   @media (min-width: $desktop-width) {
     content: "";
     position: absolute;
@@ -100,15 +100,15 @@
 
 .promo::after {
   @media (min-width: $mobile-width) {
-      content: "";
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 70%;
-      background: rgba(104, 183, 56, 0.85);
-      z-index: -3;
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: rgb(104 183 56 / 85%);
+    z-index: -3;
   }
 
   @media (min-width: $tablet-width) {
@@ -117,15 +117,15 @@
   }
 
   @media (min-width: $desktop-width) {
-      content: "";
-      position: absolute;
-      display: block;
-      top: -133px;
-      left: 50%;
-      width: 50vw;
-      height: 694px;
-      background: rgba(104, 183, 56, 0.85);
-      z-index: -2;
+    content: "";
+    position: absolute;
+    display: block;
+    top: -133px;
+    left: 50%;
+    width: 50vw;
+    height: 694px;
+    background: rgb(104 183 56 / 85%);
+    z-index: -2;
   }
 }
 
@@ -135,9 +135,9 @@
   }
 
   @media (min-width: $tablet-width) {
-      margin: 0;
-      width: 114px;
-    }
+    margin: 0;
+    width: 114px;
+  }
 
   @media (min-width: $desktop-width) {
     content: "";
@@ -153,8 +153,7 @@
   font-size: 36px;
   line-height: 36px;
   color: $white;
-
-  margin: 27px 0 25px 0;
+  margin: 27px 0 25px;
 
   @media (min-width: $tablet-width) {
     color: $black;
@@ -196,7 +195,7 @@
 .advantages__title {
   font-size: 24px;
   line-height: 37px;
-  margin: 30px 0 29px 0;
+  margin: 30px 0 29px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,10 +226,9 @@
 .advantages__link {
   font-size: 16px;
   line-height: 16px;
-
   display: flex;
   min-width: 100%;
-  margin: 38px 0 18px 0;
+  margin: 38px 0 18px;
   position: relative;
 
   &:hover {
@@ -342,17 +340,17 @@
 }
 
 .explanation__item::after {
-    @media (min-width: $tablet-width) {
-      content: counter(process);
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -1;
-      color: #f2f2f2;
-      font-family: $font-family-oswald;
-      font-size: 280px;
-      line-height: 280px;
-    }
+  @media (min-width: $tablet-width) {
+    content: counter(process);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    color: #f2f2f2;
+    font-family: $font-family-oswald;
+    font-size: 280px;
+    line-height: 280px;
+  }
 }
 
 .explanation__item::before {
@@ -369,7 +367,7 @@
   left: 0;
   width: 60px;
   height: 60px;
-  background-image: url(../img/icons/leaf.svg);
+  background-image: url("../img/icons/leaf.svg");
 }
 
 .explanation__item:nth-of-type(2)::before {
@@ -380,7 +378,7 @@
   left: 0;
   width: 60px;
   height: 60px;
-  background-image: url(../img/icons/powder.svg);
+  background-image: url("../img/icons/powder.svg");
 }
 
 .explanation__item:nth-of-type(3)::before {
@@ -391,7 +389,7 @@
   left: 0;
   width: 60px;
   height: 60px;
-  background-image: url(../img/icons/meal.svg);
+  background-image: url("../img/icons/meal.svg");
 }
 
 .explanation__item:nth-of-type(4)::before {
@@ -402,7 +400,7 @@
   left: 0;
   width: 60px;
   height: 60px;
-  background-image: url(../img/icons/weight.svg);
+  background-image: url("../img/icons/weight.svg");
 }
 
 .explanation__description {
@@ -416,7 +414,7 @@
 }
 
 .example {
-  padding: 25px 20px 40px 20px;
+  padding: 25px 20px 40px;
   display: grid;
   width: 100vw;
   background-color: #eaeaea;
@@ -481,7 +479,6 @@
   line-height: 24px;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -500,7 +497,6 @@
   font-family: $font-family-lato;
   font-size: 12px;
   line-height: 12px;
-
   display: flex;
   justify-content: center;
   justify-self: center;
@@ -602,7 +598,6 @@
   border: none;
   cursor: pointer;
   background-color: #eaeaea;
-
   font-size: 16px;
   font-family: $font-family-oswald;
   line-height: 20px;
@@ -675,10 +670,7 @@
     display: flex;
     height: 6px;
     width: 426px;
-
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     background: #dcdcdc;
     border-radius: 6px;
   }
@@ -688,22 +680,21 @@
   @media (min-width: $tablet-width) {
     position: relative;
     appearance: none;
-    -webkit-appearance: none;
     width: 34px;
     height: 34px;
     background-color: #68b738;
     border-radius: 50%;
     cursor: pointer;
     border: 13px solid #ffffff;
-    filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+    filter: drop-shadow(0 1px 3px rgb(0 0 0 / 16%));
 
     &:hover {
-      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.19));
+      filter: drop-shadow(0 2px 4px rgb(0 0 0 / 19%));
     }
 
     &:active {
       outline: 1px solid #68b738;
-      filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.20));
+      filter: drop-shadow(0 3px 5px rgb(0 0 0 / 20%));
     }
   }
 }
@@ -716,6 +707,6 @@
     border-radius: 50%;
     cursor: pointer;
     border: 13px solid #ffffff;
-    filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+    filter: drop-shadow(0 1px 3px rgb(0 0 0 / 16%));
   }
 }

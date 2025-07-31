@@ -1,17 +1,33 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-htmlacademy",
+  "customSyntax": "postcss-scss",
   "rules": {
-    "rule-empty-line-before": [
-      "always", {
-        "except": [],
-        "ignore": []
+    "no-descending-specificity": null,
+    "color-no-invalid-hex": true,
+    "font-family-no-duplicate-names": true,
+    "comment-no-empty": true,
+    "unit-no-unknown": true,
+    "property-no-unknown": true,
+    "selector-type-no-unknown": true,
+    "selector-pseudo-class-no-unknown": true,
+    "selector-pseudo-element-no-unknown": true,
+    "media-feature-name-no-unknown": true,
+    "selector-list-comma-newline-after": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "content",
+          "else",
+          "for",
+          "forward",
+          "if",
+          "include",
+          "mixin",
+          "each",
+          "use"
+        ]
       }
-    ],
-    "selector-class-pattern": "^[a-z0-9]([a-z0-9-_])*(__[a-z0-9]+)?(--[a-z0-9]+)?$",
-    "color-hex-length": "long",
-    "font-family-name-quotes": null,
-    "at-rule-empty-line-before": null,
-    "color-function-notation": null,
-    "alpha-value-notation": null
+    ]
   }
 }

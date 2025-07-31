@@ -97,6 +97,7 @@
   @media (min-width: $mobile-width) {
     display: none;
   }
+
   @media (min-width: $tablet-width) {
     display: block;
     margin-top: -50px;
@@ -200,9 +201,9 @@
     display: none;
 
     @media (min-width: $desktop-width) {
-        display: flex;
-        margin: 0;
-      }
+      display: flex;
+      margin: 0;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -240,7 +241,7 @@
   }
 }
 
-.nav__nojs  {
+.nav__nojs {
   .nav__toggle {
     display: none;
   }
