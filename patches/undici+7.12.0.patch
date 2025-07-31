@@ -1,0 +1,39 @@
+diff --git a/node_modules/undici/lib/core/util.js b/node_modules/undici/lib/core/util.js
+index aa44edf..9c2cbd3 100644
+--- a/node_modules/undici/lib/core/util.js
++++ b/node_modules/undici/lib/core/util.js
+@@ -762,7 +762,7 @@ function parseRangeHeader (range) {
+  * @returns {T}
+  */
+ function addListener (obj, name, listener) {
+-  const listeners = (obj[kListeners] ??= [])
++  const listeners = obj[kListeners] || (obj[kListeners] = [])
+   listeners.push([name, listener])
+   obj.on(name, listener)
+   return obj
+diff --git a/node_modules/undici/lib/dispatcher/client-h2.js b/node_modules/undici/lib/dispatcher/client-h2.js
+index 661d857..e31a761 100644
+--- a/node_modules/undici/lib/dispatcher/client-h2.js
++++ b/node_modules/undici/lib/dispatcher/client-h2.js
+@@ -412,7 +412,7 @@ function writeH2 (client, request) {
+   let contentLength = util.bodyLength(body)
+ 
+   if (util.isFormDataLike(body)) {
+-    extractBody ??= require('../web/fetch/body.js').extractBody
++    extractBody = extractBody || require('../web/fetch/body.js').extractBody
+ 
+     const [bodyStream, contentType] = extractBody(body)
+     headers['content-type'] = contentType
+diff --git a/node_modules/undici/lib/handler/cache-handler.js b/node_modules/undici/lib/handler/cache-handler.js
+index 937790a..328abd5 100644
+--- a/node_modules/undici/lib/handler/cache-handler.js
++++ b/node_modules/undici/lib/handler/cache-handler.js
+@@ -432,7 +432,7 @@ function stripNecessaryHeaders (resHeaders, cacheControlDirectives) {
+   let strippedHeaders
+   for (const headerName of headersToRemove) {
+     if (resHeaders[headerName]) {
+-      strippedHeaders ??= { ...resHeaders }
++      strippedHeaders = strippedHeaders || { ...resHeaders }
+       delete strippedHeaders[headerName]
+     }
+   }

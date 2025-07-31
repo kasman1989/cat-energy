@@ -1,0 +1,42 @@
+.button {
+  display: flex;
+  min-width: 280px;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #68B738;
+  border: none;
+  cursor: pointer;
+
+  font-family: $font-family-oswald;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    min-width: 244px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    .button__text {
+      opacity: 0.3;
+    }
+  }
+}
+
+.button__grey {
+  background-color: #f2f2f2;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+}

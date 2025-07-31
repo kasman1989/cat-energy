@@ -4,121 +4,177 @@
 <head>
   <meta charset="utf-8">
   <title>Cat Energy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="body">
+<body>
   <header class="header">
-    <nav class="nav">
-      <a class="nav__link--logo" href="index.html">
-        <img class="nav__logo" width="34" height="38" src="../source/img/logo.svg" alt="Логотип главная">
-        <img class="nav__img" width="101" height="18" src="../source/img/logo-header.svg" alt="Логотип Кэт Энерджи">
-      </a>
-      <button class="nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-    </nav>
+    <nav class="nav nav__closed nav__nojs">
+      <div class="nav__wrapper">
+        <div class="nav__list">
+          <a class="nav__link--logo" href="index.html">
+            <svg class="nav__logo" width="34" height="38">
+              <use href="/img/sprite.svg#logo__mobile"></use>
+            </svg>
+          </a>
+          <a class="nav__link--logo" href="index.html">
+            <svg class="nav__img" width="101" height="18">
+              <use href="/img/sprite.svg#logo__sign"></use>
+            </svg>
+          </a>
+          <a class="nav__logo--desktop" href="index.html">
+            <svg class="nav__desktop" width="174" height="51">
+              <use href="/img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <button class="nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
 
-    <ul class="nav__list">
-      <li сlass="nav__item">
-        <a class="nav__link" href="index.html">главная</a>
-      </li>
-      <li сlass="nav__item">
-        <a class="nav__link" href="catalog.html">каталог продукции</a>
-      </li>
-      <li сlass="nav__item">
-        <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">подбор программы</a>
-      </li>
-    </ul>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link uppercase" href="index.html">главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link uppercase" href="catalog.html">каталог продукции</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link uppercase current" href="form.html">подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
+
+  <script>
+    var navMain = document.querySelector('.nav');
+    var navToggle = document.querySelector('.nav__toggle');
+
+    navMain.classList.remove('nav__nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('nav__closed')) {
+        navMain.classList.remove('nav__closed');
+        navMain.classList.add('nav__opened');
+      } else {
+        navMain.classList.add('nav__closed');
+        navMain.classList.remove('nav__opened');
+      }
+    });
+  </script>
 
   <main class="main__form">
     <form class="program__form" action="submit" method="post">
       <section class="program">
         <h1 class="program__title">Подбор программы</h1>
-        <p class="program__guide">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <p class="program__guide uppercase">Заполните анкету, и мы подберем<br class="br__tablet"> программу питания для вашего кота</p>
 
         <div class="questionnaire">
           <div class="questionnaire__item">
             <label class="questionnaire__label">
-              <span class="questionnaire__title">ИМЯ:*</span>
-              <input class="questionnaire__input" type="text" placeholder="барсик">
+              <span class="questionnaire__title uppercase">Имя:*</span>
+              <input class="questionnaire__input uppercase" type="text" placeholder="барсик">
             </label>
 
             <label class="questionnaire__label">
-              <span class="questionnaire__title">Вес (кг):*</span>
+              <span class="questionnaire__title uppercase">Вес (кг):*</span>
               <input class="questionnaire__input" type="text" placeholder="7">
             </label>
 
             <label class="questionnaire__label">
-              <span class="questionnaire__title">Возраст (лет):</span>
+              <span class="questionnaire__title uppercase">Возраст (лет):</span>
               <input class="questionnaire__input" type="text" placeholder="7">
             </label>
           </div>
 
           <div class="questionnaire__item">
             <label class="questionnaire__label">
-              <input class="questionnaire__input" type="radio" checked>
-              <span class="questionnaire__title">похудение</span>
+              <input class="questionnaire__input questionnaire__input--radio" type="radio" name="goal" checked>
+              <span class="questionnaire__title uppercase">похудение</span>
             </label>
 
             <label class="questionnaire__label">
-              <input class="questionnaire__input" type="radio">
-              <span class="questionnaire__title">Набор массы</span>
+              <input class="questionnaire__input questionnaire__input--radio" type="radio" name="goal">
+              <span class="questionnaire__title uppercase">Набор массы</span>
             </label>
 
             <label class="questionnaire__label">
-              <input class="questionnaire__input" type="radio">
-              <span class="questionnaire__title">Не знаю (Нужен ваш совет)</span>
+              <input class="questionnaire__input questionnaire__input--radio" type="radio" name="goal">
+              <span class="questionnaire__title uppercase">Не знаю (Нужен ваш совет)</span>
             </label>
           </div>
         </div>
       </section>
 
       <section class="user__contacts">
-        <h2 class="user__contacts--title">Контактные данные (владельца кота)</h2>
+        <h2 class="user__contacts--title">Контактные данные<br class="br__mobile"> (владельца кота)</h2>
 
-        <label class="user__contacts--label">
-          <span class="user__contacts--input-title">E-mail:*</span>
-          <input class="user__contacts--input" type="email" placeholder="кuklachev@gmail.com">
-        </label>
+        <div class="user__contacts--container">
+          <label class="user__contacts--label">
+            <span class="user__contacts--input-title uppercase">E-mail:*</span>
+            <input class="user__contacts--input" type="email" placeholder="KUKLACHEV@GMAIL.COM">
+            <svg class="email__icon" xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
+  <line x1="1.18955" y1="6" x2="1.18955" y2="14" stroke="#currentColor" stroke-width="1.3"/>
+  <line x1="18.1896" y1="6" x2="18.1896" y2="14" stroke="#currentColor" stroke-width="1.3"/>
+  <line x1="0.539551" y1="13.35" x2="18.5396" y2="13.35" stroke="#currentColor" stroke-width="1.3"/>
+  <line x1="0.539551" y1="1.35" x2="18.5396" y2="1.35" stroke="#currentColor" stroke-width="1.3"/>
+  <path d="M1.18994 3.18262V1.65039L17.8892 1.65039V3.18262L9.53955 9.67676L1.18994 3.18262Z" stroke="#currentColor" stroke-width="1.3"/>
+</svg>
+          </label>
 
-        <label class="user__contacts--label">
-          <span class="user__contacts--input-title">Телефон:*</span>
-          <input class="user__contacts--input" type="tel" placeholder="8 (960) 900-60-90">
-        </label>
+          <label class="user__contacts--label">
+            <span class="user__contacts--input-title uppercase">Телефон:*</span>
+            <input class="user__contacts--input" type="tel" placeholder="8 (960) 900-60-90">
+            <svg class="phone__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_2403_1625)">
+    <path d="M17.7561 9.4H9.61816V10.6H17.7561L15.7455 12.7L16.6072 13.6L19.5752 10.5C19.6684 10.3702 19.7188 10.2123 19.7188 10.05C19.7188 9.88772 19.6684 9.72982 19.5752 9.6L16.6072 6.5L15.7455 7.4L17.7561 9.4Z" fill="currentColor"/>
+    <path d="M8.37362 19.4V13.2C8.36256 13.0447 8.29849 12.8987 8.19306 12.7886C8.08763 12.6785 7.94786 12.6116 7.79917 12.6H3.5866C3.59153 12.9167 3.71415 13.2189 3.92855 13.4428C4.14295 13.6668 4.43232 13.7949 4.73548 13.8H7.12899V18.8H3.5866C3.35992 18.8149 3.13268 18.7825 2.91809 18.7048C2.70349 18.6271 2.50582 18.5057 2.33656 18.3475C2.1673 18.1893 2.02983 17.9976 1.93215 17.7834C1.83446 17.5693 1.7785 17.337 1.76753 17.1V3.10001C1.75968 2.6373 1.92564 2.18977 2.22987 1.85331C2.5341 1.51686 2.95238 1.31824 3.39512 1.30001H7.12899V6.30001H4.83122C4.52806 6.30516 4.23869 6.43324 4.02429 6.65718C3.80989 6.88112 3.68727 7.18336 3.68234 7.50001H7.89491C8.0436 7.48846 8.18337 7.42154 8.2888 7.31142C8.39423 7.2013 8.4583 7.05531 8.46936 6.90001V0.600012C8.42369 0.443872 8.33642 0.304534 8.21775 0.198285C8.09907 0.0920352 7.95389 0.0232649 7.79917 1.23734e-05H3.5866C3.20936 -0.0133408 2.8333 0.0511002 2.47993 0.189651C2.12655 0.328202 1.80279 0.538145 1.52714 0.807477C1.2515 1.07681 1.02939 1.40025 0.8735 1.7593C0.717613 2.11835 0.631012 2.50598 0.618647 2.90001V16.8C0.590902 17.1977 0.642233 17.597 0.769411 17.9729C0.89659 18.3489 1.09686 18.6932 1.35764 18.9844C1.61841 19.2756 1.93405 19.5072 2.28469 19.6648C2.63534 19.8224 3.0134 19.9024 3.39512 19.9H7.79917C7.86953 19.915 7.94222 19.9133 8.01186 19.895C8.0815 19.8767 8.1463 19.8423 8.20147 19.7942C8.25664 19.7462 8.30075 19.6859 8.33055 19.6176C8.36035 19.5494 8.37507 19.475 8.37362 19.4Z" fill="currentColor"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_2403_1625">
+      <rect width="19.1481" height="20" fill="currentColor" transform="translate(0.618652)"/>
+    </clipPath>
+  </defs>
+</svg>
+          </label>
+        </div>
       </section>
 
       <section class="comments">
         <h2 class="comments__title">Комментарий</h2>
-        <input class="comments__input" type="text" placeholder="Расскажите обо всех повадках кота">
+        <textarea class="comments__input" type="text" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
       </section>
 
       <section class="additional__form">
         <h2 class="additional__form--title">Дополнительно</h2>
 
-        <label class="additional__form--label">
-          <input class="additional__form--input" type="checkbox" checked>
-          <span class="additional__form--input-title">сахарозаменитель</span>
-        </label>
+        <div class="additional__form--container">
+          <label class="additional__form--label">
+            <input class="additional__form--input" type="checkbox" checked>
+            <span class="additional__form--input-title uppercase">сахарозаменитель</span>
+          </label>
 
-        <label class="additional__form--label">
-          <input class="additional__form--input" type="checkbox">
-          <span class="additional__form--input-title">питьевая вода</span>
-        </label>
+          <label class="additional__form--label">
+            <input class="additional__form--input" type="checkbox">
+            <span class="additional__form--input-title uppercase">питьевая вода</span>
+          </label>
 
-        <label class="additional__form--label">
-          <input class="additional__form--input" type="checkbox">
-          <span class="additional__form--input-title">молоко</span>
-        </label>
+          <label class="additional__form--label">
+            <input class="additional__form--input" type="checkbox">
+            <span class="additional__form--input-title uppercase">молоко</span>
+          </label>
 
-        <label class="additional__form--label">
-          <input class="additional__form--input" type="checkbox">
-          <span class="additional__form--input-title">витамины</span>
-        </label>
+          <label class="additional__form--label">
+            <input class="additional__form--input" type="checkbox">
+            <span class="additional__form--input-title uppercase">витамины</span>
+          </label>
+        </div>
 
         <button class="additional__form--button button" type="submit">
-          <span class="additional__form--button-text">отправить заявку</span>
+          <span class="additional__form--button-text button__text">отправить заявку</span>
         </button>
 
         <span class="additional__form--text">* — Обязательные поля</span>
@@ -127,16 +183,26 @@
   </main>
 
   <footer class="footer">
+    <h2 class="visually-hidden">Раздел с контактными данными</h2>
+
     <section class="contacts">
-      <p class="invite__dillers">приглашаем к сотрудничеству дилеров!</p>
-      <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <h3 class="visually-hidden">Адрес</h3>
+
+      <p class="invite__dillers uppercase">приглашаем<br>к сотрудничеству<br>дилеров!</p>
+      <p class="contacts__adress">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
     </section>
 
-    <img class="location__img" width="320" height="362" src="../source/img/location.png" alt="карта">
+    <picture>
+      <source media="(min-width: 1220px)" srcset="../img/content/map_desktop.png, ../img/content/map_desktop@2x.png 2x">
+      <source media="(min-width: 708px)" srcset="../img/content/map_tablet.png, ../img/content/map_tablet@2x.png 2x">
+      <img class="location__img" width="320" height="362" src="../img/content/map_mobile.png" srcset="../img/content/map_mobile@2x.png 2x" alt="карта">
+    </picture>
 
     <div class="social__contacts">
       <a class="footer__logo" href="index.html">
-        <img src="../source/img/logo-footer.svg" alt="Логотип Кэт Энерджи">
+        <svg class="footer__logo--item" width="128" height="24">
+          <use href="/img/sprite.svg#logo__sign"></use>
+        </svg>
       </a>
 
       <ul class="social">
@@ -154,7 +220,7 @@
       <div class="academy__links">
         <a class="academy__link" href="">HTML Academy</a>
         <a class="academy__link--img" href="#">
-          <img class="academy-img" width="27" height="34" src="../source/img/academy-logo.svg" alt="Логотип Академии">
+          <img class="academy-img" width="27" height="34" src="../img/icons/academy-logo.svg" alt="Логотип Академии">
         </a>
       </div>
     </div>

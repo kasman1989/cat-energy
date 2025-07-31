@@ -1,0 +1,13 @@
+diff --git a/node_modules/parse5-parser-stream/dist/cjs/index.js b/node_modules/parse5-parser-stream/dist/cjs/index.js
+index a5002be..8b33a95 100644
+--- a/node_modules/parse5-parser-stream/dist/cjs/index.js
++++ b/node_modules/parse5-parser-stream/dist/cjs/index.js
+@@ -1,7 +1,7 @@
+ "use strict";
+ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.ParserStream = void 0;
+-const node_stream_1 = require("node:stream");
++const node_stream_1 = require("stream");
+ const parse5_1 = require("parse5");
+ /* eslint-disable unicorn/consistent-function-scoping -- The rule seems to be broken here. */
+ /**

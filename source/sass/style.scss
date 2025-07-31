@@ -1,0 +1,71 @@
+@import "variables";
+@import "blocks/fonts";
+@import "blocks/button";
+@import "blocks/visually-hidden";
+@import "blocks/header";
+@import "blocks/footer";
+@import "pages/index";
+@import "pages/catalog";
+@import "pages/form";
+
+.page {
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  font-family: $font-family-oswald;
+  font-weight: $font-weight-normal;
+  font-size: 14px;
+  font-style: normal;
+  color: $black;
+  overflow-x: hidden;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, p {
+  font-weight: $font-weight-normal;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (min-width: $desktop-width) {
+  .main, .main__catalog, .main__form {
+    padding: 0 110px;
+    max-width: 100%;
+  }
+  .card__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.input__error {
+  border: 2px solid #ff8282;
+}

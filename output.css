@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldregular.woff") format("woff"), url("../fonts/oswaldregular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("../fonts/latoregular.woff") format("woff"), url("../fonts/latoregular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+.nav__link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.promo__title {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.promo__text {
+  line-height: 14px;
+}
+
+.advantages__title {
+  font-size: 24px;
+  line-height: 37px;
+}
+
+.advantages__description {
+  color: #444444;
+  font-family: "Lato-Regular", sans-serif;
+  line-height: 18px;
+}
+
+.advantages__link {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.explanation__title {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.explanation__description {
+  color: #444444;
+  font-family: "Lato-Regular", sans-serif;
+  line-height: 18px;
+}
+
+.example__title {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.example__description {
+  color: #444444;
+  font-family: "Lato-Regular", sans-serif;
+  line-height: 18px;
+}
+
+.example__list--title {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__list--description {
+  color: #444444;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.example__spend {
+  line-height: 20px;
+}
+
+.example__button--text {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.invite__dillers {
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+}
+
+.contacts__adress {
+  color: #444444;
+  font-family: "Lato-Regular", sans-serif;
+  line-height: 20px;
+}
+
+.academy__link {
+  color: #444444;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 16px;
+}
+
+.promo {
+  background-image: url("../img/background-main.jpg");
+  position: relative;
+  min-width: 100%;
+  z-index: -2;
+}
+
+.promo::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: rgba(104, 183, 56, 0.85);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.advantages {
+  background-color: #F2F2F2;
+}
+
+.example {
+  background-color: #F2F2F2;
+}
+
+.social__contacts {
+  background-color: #F2F2F2;
+}
+
+.gift {
+  background-image: url("../img/present-background.jpg");
+  position: relative;
+  z-index: -2;
+  color: #ffffff;
+  text-align: center;
+  height: 290px;
+}
+
+.gift::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: rgba(104, 183, 56, 0.85);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.questionnaire__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  display: flex;
+  min-width: 280px;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #68B738;
+  border: none;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=output.css.map */
