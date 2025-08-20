@@ -6,6 +6,18 @@
   }
 }
 
+.br__tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "\A";
+      white-space: pre;
+      display: inline;
+    }
+  }
+}
+
 .main {
   @media (min-width: $tablet-width) {
     padding: 0 30px;

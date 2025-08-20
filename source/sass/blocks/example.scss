@@ -1,14 +1,16 @@
 .example {
-  padding: 25px 20px 40px;
+  padding: 25px 20px 29px;
   display: grid;
   width: 100vw;
   background-color: #eaeaea;
   margin-top: 9px;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to bottom, #ffffff 50%, #eaeaea 50%);
+    background: linear-gradient(to bottom, #fff 620px, #eaeaea 80px);
     margin: 0 -30px;
-    padding: 0 30px;
+    padding: 43px 30px 62px 30px;
+    width: 100%;
+    box-sizing: content-box;
   }
 
   @media (min-width: $desktop-width) {
@@ -44,6 +46,7 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: $desktop-width) {
@@ -60,15 +63,23 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    word-spacing: 0;
+    margin-bottom: 20px;
   }
 }
 
 .example__list {
   margin: 0;
   padding: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 24px;
   justify-content: space-between;
-  column-gap: 40px;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 42px;
+    margin-top: 33px;
+  }
 }
 
 .example__item {
@@ -94,7 +105,8 @@
 
   @media (min-width: $tablet-width) {
     width: 162px;
-    height: 77px;
+    height: 72px;
+    margin: -2px 0 7px;
 
     font-size: 30px;
     line-height: 37px;
@@ -112,10 +124,10 @@
   position: absolute;
   content: "";
   bottom: -10px;
-  left: center;
+  left: 16px;
 
   color: $dark-grey;
-  font-family: Arial, sans-serif;
+  font-family: $font-family-lato;
   font-size: 12px;
   line-height: 12px;
   background-color: #eaeaea;
@@ -123,6 +135,7 @@
   @media (min-width: $tablet-width) {
     width: 80%;
     bottom: 0;
+    margin: 0;
 
     font-size: 14px;
     line-height: 14px;
@@ -152,12 +165,13 @@
 .example__spend {
   line-height: 20px;
   display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+  margin: 11px 0 36px 47px;
 
   @media (min-width: $tablet-width) {
     text-align: right;
     flex-direction: column;
+    margin: 28px 0 0 0;
+    letter-spacing: 0.01em;
   }
 
   @media (min-width: $desktop-width) {
@@ -174,6 +188,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    line-height: 29px;
   }
 }
 
@@ -203,6 +218,7 @@
   @media (min-width: $tablet-width) {
     border-bottom: 1px dotted #b8b8b8;
     font-size: 20px;
+    margin-left: -5px;
 
     &:hover {
       border-bottom: 1px solid #919191;
@@ -217,6 +233,11 @@
 .example__image {
   display: flex;
   justify-content: center;
+  margin: 41px 9px 0 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 80px 0px 0 0;
+  }
 }
 
 .example__img {
@@ -234,11 +255,14 @@
 }
 
 .example__switcher {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 0 15px -9px;
   text-align: center;
   display: flex;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 29px 0 0px 2px;
+  }
 
   @media (min-width: $desktop-width) {
     justify-content: end;
@@ -252,9 +276,13 @@
   grid-template-columns: 49px 1fr 49px;
   align-items: center;
   justify-self: center;
-  gap: 13px;
+  gap: 12px;
   padding: 0 35px;
   width: 210px;
+
+  @media (min-width: $tablet-width) {
+    gap: 21px;
+  }
 
   @media (min-width: $desktop-width) {
     justify-self: end;
@@ -284,7 +312,7 @@
 
   .switcher__before & {
     justify-content: flex-start;
-    padding-right: 36px;
+    padding-right: 43px;
   }
 
   @media (min-width: $tablet-width) {

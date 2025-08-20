@@ -8,7 +8,8 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 60px;
+    margin: 77px 0 0 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -28,13 +29,13 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
-  padding: 30px 0;
+  padding: 18px 0;
 
   &::before {
     content: "";
     position: absolute;
     display: block;
-    bottom: 0;
+    bottom: -7px;
     left: -20px;
     width: 100vw;
     border-bottom: 1px solid #ebebeb;
@@ -63,38 +64,284 @@
   &:last-child {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     height: 80%;
+    margin: -6px 0 0 2px;
 
-    @media (min-width: $tablet-width) {
-      border: 2px solid #f2f2f2;
-      align-self: end;
+    .card__title {
+      margin: 8px 0 0 0;
+    }
+
+    .card__description {
+      margin: -7px 0 0 -2px;
     }
 
     .card__button {
       color: $dark-grey;
       font-size: 16px;
       line-height: 20px;
+      margin-top: 6px;
+    }
+
+    @media (min-width: $tablet-width) {
+      border: 2px solid #f2f2f2;
+      align-self: end;
     }
   }
 
   &:not(:last-child) {
     @media (min-width: $tablet-width) {
-      background: linear-gradient(to bottom, #ffffff 20%, #f2f2f2 20%);
+      background: linear-gradient(to bottom, #ffffff 17%, #f2f2f2 17%);
+    }
+  }
+
+  &:nth-child(2) {
+    .card__title {
+      margin-top: -17px;
+    }
+
+    picture {
+      margin-top: -1px;
+    }
+
+    .spec {
+      margin-top: -13px;
+    }
+
+    .card__button {
+      margin-top: 13px;
+    }
+
+    @media (min-width: $tablet-width) {
+      .card__img {
+        height: 208px;
+        margin-bottom: 14px;
+      }
+
+      .spec {
+        margin: -9px 0 -4px 0;
+      }
+
+      picture {
+        margin: -18px 0 20px;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    .card__title {
+      margin-top: -11px;
+    }
+
+    picture {
+      margin-top: 15px;
+    }
+
+    .spec {
+      margin-top: 0;
+    }
+
+    .card__button {
+      margin-top: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      .card__img {
+        margin-bottom: 14px;
+      }
+
+      .spec {
+        margin: 0 0 7px;
+      }
+
+      picture {
+        margin: 5px 0 32px;
+      }
+
+      .card__button {
+        margin-top: 13px;
+      }
+
+      &:not(:last-child) {
+        background: linear-gradient(to bottom, #fff 16%, #f2f2f2 16%);
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    .card__title {
+      margin-top: -18px;
+    }
+
+    picture {
+      margin-top: -1px;
+    }
+
+    .spec {
+      margin-top: -12px;
+    }
+
+    .card__button {
+      margin-top: 13px;
+    }
+
+    @media (min-width: $tablet-width) {
+      .card__img {
+        margin-bottom: 14px;
+      }
+
+      .spec {
+        margin: 0 0 7px;
+      }
+
+      picture {
+        margin: -22px 0 38px;
+      }
+
+      &:not(:last-child) {
+        background: linear-gradient(to bottom, #fff 16%, #f2f2f2 16%);
+      }
+    }
+  }
+
+  &:nth-child(5) {
+    .card__title {
+      margin-top: -14px;
+    }
+
+    picture {
+      margin-top: 18px;
+    }
+
+    .spec {
+      margin-top: -6px;
+    }
+
+    .card__button {
+      margin-top: 17px;
+    }
+
+    @media (min-width: $tablet-width) {
+      &:not(:last-child) {
+        background: linear-gradient(to bottom, #fff 16%, #f2f2f2 16%);
+      }
+
+      picture {
+        margin: 7px 0 43px 0;
+      }
+    }
+  }
+
+  &:nth-child(6) {
+    .card__title {
+      margin-top: -18px;
+    }
+
+    picture {
+      margin-top: 0;
+    }
+
+    .spec {
+      margin-top: -13px;
+    }
+
+    .card__button {
+      margin-top: 13px;
+    }
+
+    @media (min-width: $tablet-width) {
+      .card__img {
+        margin-bottom: 14px;
+      }
+
+      .spec {
+        margin: 0 0 7px;
+      }
+
+      picture {
+        margin: -22px 0 38px;
+      }
+
+      &:not(:last-child) {
+        background: linear-gradient(to bottom, #fff 16%, #f2f2f2 16%);
+      }
+    }
+  }
+
+  &:nth-child(7) {
+    .card__title {
+      margin-top: -15px;
+    }
+
+    picture {
+      margin-top: 12px;
+    }
+
+    .spec {
+      margin-top: -8px;
+    }
+
+    .card__button {
+      margin-top: 17px;
+    }
+
+    @media (min-width: $tablet-width) {
+      &:not(:last-child) {
+        background: linear-gradient(to bottom, #fff 16%, #f2f2f2 16%);
+      }
+
+      picture {
+        margin: 5px 0 50px 0;
+      }
+
+      .spec {
+        margin: 1px 0 2px 0
+      }
+    }
+  }
+
+  &:nth-child(8) {
+    @media (min-width: $tablet-width) {
+      height: 84%;
+
+      .card__img {
+        width: 60px;
+        height: 60px;
+        margin: 22px 0px 0px 1px;
+      }
+
+      .card__img line {
+        stroke-width: 1.2;
+      }
+
+      .card__title {
+        line-height: 22px;
+        font-size: 20px;
+        margin: -8px 0 0 4px;
+      }
+
+      .card__description {
+        line-height: 18px;
+        margin: -30px 0px 21px 4px;
+      }
+
+      .card__button {
+        padding: 13px 0 7px;
+      }
     }
   }
 
   @media (min-width: $tablet-width) {
-    padding: 30px;
+    padding: 30px 30px 39px 30px;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     flex-direction: column;
   }
 }
 
 .card__title {
   grid-area: title;
-  margin-top: -15px;
+  margin-top: 3px;
 
   color: $darken-grey;
   font-size: 16px;
@@ -107,7 +354,7 @@
 
   @media (min-width: $tablet-width) {
     order: 2;
-    margin-top: 10px;
+    margin: 34px 0 0 6px;
     text-align: center;
 
     font-size: 20px;
@@ -119,7 +366,7 @@
   grid-area: image;
   justify-self: center;
   align-self: center;
-  margin-top: -30px;
+  margin-top: 11px;
 }
 
 .card__img {
@@ -155,22 +402,41 @@
   @media (min-width: $tablet-width) {
     order: 3;
     display: grid;
+    padding: 23px 7px 19px 7px;
+    row-gap: 15px;
   }
 }
 
 .spec__item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin: -2px -1px 2px 0;
 
   @media (min-width: $tablet-width) {
-    border-bottom: 1px solid #ebebeb;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: -9px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #ebebeb;
+    }
+  }
+}
+
+.card__item .spec__item:nth-child(3) .spec__details {
+  @media (min-width: $tablet-width) {
+    margin-top: 2px;
   }
 }
 
 .card__item .card__description, .spec__item {
   color: $dark-grey;
-  font-family: $font-family-lato;
+  font-family: "Arial", sans-serif;
   font-size: $font-size-small;
   line-height: 16px;
   font-weight: $font-weight-normal;
@@ -194,8 +460,14 @@
   grid-area: button;
   width: 100%;
   z-index: 1;
+  margin-top: 20px;
+  padding: 10px 0;
+
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: $tablet-width) {
     order: 4;
+    width: 248px;
   }
 }

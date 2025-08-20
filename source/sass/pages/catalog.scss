@@ -18,29 +18,13 @@
 
 .main__catalog {
   padding: 0 20px;
+  border-top: 1px solid #D9D9D9;
 
   @media (min-width: $tablet-width) {
-
+  padding: 0 30px;
   }
   @media (min-width: $desktop-width) {
     padding: 0 110px;
     max-width: 100%;
-  }
-}
-
-.goods {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.goods__title {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: $font-weight-normal;
-
-  @media (min-width: $tablet-width) {
-    font-size: 60px;
-    line-height: 60px;
   }
 }

@@ -8,6 +8,11 @@
   grid-template-columns: repeat(2, 1fr);
   margin: 26px 20px;
 
+  @media (min-width: $tablet-width) {
+    margin: 61px 30px;
+    padding: 0 40px;
+  }
+
   @media (min-width: $desktop-width) {
     position: absolute;
     display: grid;
@@ -36,10 +41,29 @@
   }
 }
 
+.contacts__catalog {
+  margin: -53px 0 0 0;
+  padding: 26px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 70px;
+    margin-top: -12px;
+  }
+}
+
+.contacts__form {
+  padding: 26px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 70px;
+  }
+}
+
 .invite__dillers {
   font-size: 16px;
   line-height: 20px;
   color: $charcoal;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -49,12 +73,14 @@
 
 .contacts__adress {
   color: $dark-grey;
-  font-family: $font-family-lato;
+  font-family: Arial, sans-serif;
   line-height: 20px;
+  margin: 0 0 0 1px;
 
   @media (min-width: $tablet-width) {
     text-align: right;
     font-size: 16px;
+    margin-top: -3px;
   }
 }
 
@@ -72,7 +98,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 39px 32px;
+  padding: 39px 32px 0 32px;
+
+  @media (min-width: $tablet-width) {
+    padding: 4px 31px 0px;
+  }
 }
 
 .footer__logo--item {
@@ -92,11 +122,14 @@
   justify-content: center;
   align-items: center;
   margin: 20px;
-  padding: 20px 0;
-  column-gap: 20px;
+  margin-top: 31px;
+  padding: 21px 0 16px 0;
+  column-gap: 34px;
+
 
   @media (min-width: $tablet-width) {
-    border: none;
+    margin: 35px 0px 35px 30px;
+    column-gap: 23px;
   }
 }
 
@@ -111,7 +144,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px 20px;
+  padding: 2px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0px 31px;
+  }
 }
 
 .academy__link {
@@ -145,6 +182,15 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.social__item {
+  &:first-child {
+    .social__link {
+      margin: -5px 2px 0 -3px;
+      display: flex;
+    }
   }
 }
 

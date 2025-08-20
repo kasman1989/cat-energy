@@ -1,0 +1,19 @@
+.goods {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.goods__title {
+  margin: 27px 0 40px 1px;
+
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: $font-weight-normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 34px 0 40px 1px;
+  }
+}

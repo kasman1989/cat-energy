@@ -10,3 +10,10 @@
 .list {
   list-style-type: none;
 }
+
+.spacer {
+  @media (min-width: $tablet-width) {
+    display: block;
+    height: 1.2em;
+  }
+}

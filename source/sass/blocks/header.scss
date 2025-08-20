@@ -184,6 +184,23 @@
     margin-left: -1px;
   }
 
+  @media (min-width: $tablet-width) {
+    &:nth-child(1) {
+      letter-spacing: -0.01em;
+      margin-top: 0px;
+    }
+
+    &:nth-child(2) {
+      letter-spacing: 0.01em;
+      margin-left: -4px;
+    }
+
+    &:nth-child(3) {
+      letter-spacing: 0;
+      margin-left: 0px;
+    }
+  }
+
   @media (min-width: $desktop-width) {
       color: $white;
   }
@@ -277,7 +294,7 @@
     display: block;
     top: 10px;
     right: 10px;
-    width: 20px; 
+    width: 20px;
     height: 20px;
     background-image: url("../img/icons/close.svg");
   }
@@ -347,7 +364,7 @@
     content: "";
     display: block;
     position: absolute;
-    bottom: 15px;
+    bottom: 10px;
     left: 0;
     height: 2px;
     width: 100%;
