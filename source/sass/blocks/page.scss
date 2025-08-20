@@ -1,0 +1,22 @@
+.page {
+  overflow-x: hidden;
+  min-height: 100%;
+}
+
+.body {
+  min-width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family-oswald;
+  font-weight: $font-weight-normal;
+  font-size: 14px;
+  font-style: normal;
+  color: $black;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.footer {
+  margin-top: auto;
+}

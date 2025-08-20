@@ -1,0 +1,343 @@
+.example {
+  padding: 25px 20px 40px;
+  display: grid;
+  width: 100vw;
+  background-color: #eaeaea;
+  margin-top: 9px;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to bottom, #ffffff 50%, #eaeaea 50%);
+    margin: 0 -30px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient(to bottom, #ffffff 20%, #eaeaea 20%);
+    margin: 0 -110px;
+    padding: 0 110px;
+  }
+}
+
+.example__columns {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.example__content {
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: $font-weight-normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.example__description {
+  color: $dark-grey;
+  font-family: Arial, sans-serif;
+  line-height: 18px;
+  word-spacing: 0.3px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.example__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 40px;
+}
+
+.example__item {
+  text-align: center;
+  position: relative;
+}
+
+.example__list--title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 124px;
+  height: 56px;
+  margin-top: 5px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: $font-weight-normal;
+
+  border-radius: 3px;
+  border: 1px solid #cdcdcd;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    height: 77px;
+
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__list--description {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  width: 70%;
+
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: center;
+
+  color: $dark-grey;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: #eaeaea;
+
+  @media (min-width: $tablet-width) {
+    width: 80%;
+    bottom: 0;
+
+    font-size: 14px;
+    line-height: 14px;
+    font-style: normal;
+
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: #eaeaea;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-self: start;
+  }
+}
+
+.example__spend {
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    column-gap: 130px;
+    width: 100%;
+  }
+}
+
+.example__spend--text {
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.example__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    justify-self: center;
+    width: 592px;
+    overflow: hidden;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-self: end;
+    padding: 0;
+  }
+}
+
+.example__button--text {
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px dotted #b8b8b8;
+    font-size: 20px;
+
+    &:hover {
+      border-bottom: 1px solid #919191;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
+  }
+}
+
+.example__image {
+  display: flex;
+  justify-content: center;
+}
+
+.example__img {
+  width: 592px;
+  height: auto;
+}
+
+.example__button {
+  border: none;
+  cursor: pointer;
+  background-color: #eaeaea;
+  font-size: 16px;
+  font-family: $font-family-oswald;
+  line-height: 20px;
+}
+
+.example__switcher {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    justify-content: end;
+    grid-column: span 2;
+    grid-row: 2/3;
+  }
+}
+
+.switcher {
+  display: grid;
+  grid-template-columns: 49px 1fr 49px;
+  align-items: center;
+  justify-self: center;
+  gap: 13px;
+  padding: 0 35px;
+  width: 210px;
+
+  @media (min-width: $desktop-width) {
+    justify-self: end;
+  }
+}
+
+.switcher__toggler {
+  padding: 3px 5px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+
+  &::after {
+    content: "";
+    width: 36px;
+    height: 6px;
+    background-color: #68b738;
+    border-radius: 6px;
+  }
+
+  .switcher__after & {
+    justify-content: flex-end;
+    padding-left: 36px;
+  }
+
+  .switcher__before & {
+    justify-content: flex-start;
+    padding-right: 36px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.switcher__bar {
+  @media (min-width: $mobile-width) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    height: 6px;
+    width: 426px;
+    appearance: none;
+    background: #dcdcdc;
+    border-radius: 6px;
+  }
+}
+
+.switcher__bar::-webkit-slider-thumb {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    appearance: none;
+    width: 34px;
+    height: 34px;
+    background-color: #68b738;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 13px solid #ffffff;
+    filter: drop-shadow(0 1px 3px rgb(0 0 0 / 16%));
+
+    &:hover {
+      filter: drop-shadow(0 2px 4px rgb(0 0 0 / 19%));
+    }
+
+    &:active {
+      outline: 1px solid #68b738;
+      filter: drop-shadow(0 3px 5px rgb(0 0 0 / 20%));
+    }
+  }
+}
+
+.switcher__bar::-moz-range-thumb {
+  @media (min-width: $tablet-width) {
+    width: 34px;
+    height: 34px;
+    background-color: #68b738;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 13px solid #ffffff;
+    filter: drop-shadow(0 1px 3px rgb(0 0 0 / 16%));
+  }
+}

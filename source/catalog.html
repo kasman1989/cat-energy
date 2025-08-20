@@ -7,26 +7,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="../fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/latoregular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="../fonts/latoregular.woff" as="font" type="font/woff" crossorigin>
 </head>
 
-<body>
+<body class="body">
   <header class="header">
     <nav class="nav nav__closed nav__nojs">
       <div class="nav__wrapper">
         <div class="nav__list">
-          <a class="nav__link--logo" href="index.html">
+          <a class="link link__logo--mobile">
             <svg class="nav__logo" width="34" height="38">
-              <use href="/img/sprite.svg#logo__mobile"></use>
+              <use xlink:href="./img/sprite.svg#logo__mobile"></use>
             </svg>
           </a>
-          <a class="nav__link--logo" href="index.html">
-            <svg class="nav__img" width="101" height="18">
-              <use href="/img/sprite.svg#logo__sign"></use>
+          <a class="link link__logo--sign">
+            <svg class="nav__sign" width="101" height="18">
+              <use xlink:href="./img/sprite.svg#logo__sign"></use>
             </svg>
           </a>
-          <a class="nav__logo--desktop" href="index.html">
-            <svg class="nav__desktop" width="174" height="51">
-              <use href="/img/sprite.svg#logo"></use>
+          <a class="link link__logo--tablet">
+            <svg class="nav__tablet" width="174" height="51">
+              <use xlink:href="./img/sprite.svg#logo__tablet"></use>
+            </svg>
+          </a>
+          <a class="link link__logo--desktop">
+            <svg class="nav__desktop" width="202" height="59">
+              <use xlink:href="./img/sprite.svg#logo__desktop"></use>
             </svg>
           </a>
           <button class="nav__toggle" type="button">
@@ -35,14 +44,14 @@
         </div>
 
         <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link uppercase" href="index.html">главная</a>
+          <li class="list nav__item">
+            <a class="link nav__link uppercase" href="index.html">главная</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link uppercase current" href="catalog.html">каталог продукции</a>
+          <li class="list nav__item">
+            <a class="link nav__link uppercase current" href="catalog.html">каталог продукции</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link uppercase" href="form.html">подбор программы</a>
+          <li class="list nav__item">
+            <a class="link nav__link uppercase" href="form.html">подбор программы</a>
           </li>
         </ul>
       </div>
@@ -71,8 +80,8 @@
       <h1 class="goods__title">Каталог продукции</h1>
 
       <ul class="card__list">
-        <li class="card__item">
-          <h3 class="card__title uppercase">Cat Energy<br class="br__mobile"> pro<br class="br__tablet"> 500 г</h3>
+        <li class="list card__item">
+          <h3 class="card__title uppercase">Cat Energy&nbsp<br class="br__mobile">pro<br class="br__tablet">500 г</h3>
           <picture>
             <source media="(min-width: 708px)" srcset="../img/card_img/chicken_500_tablet.png, ../img/card_img/chicken_500_tablet@2x.png 2x">
             <img class="card__img card__small" width="68" height="86" src="../img/card_img/chicken_500_mobile.png" srcset="../img/card_img/chicken_500_mobile@2x.png 2x" alt="со вкусом курицы">
@@ -96,8 +105,8 @@
           </button>
         </li>
 
-        <li class="card__item">
-          <h3 class="card__title uppercase">Cat Energy<br class="br__mobile"> PRO<br class="br__tablet"> 1000 г</h3>
+        <li class="list card__item">
+          <h3 class="card__title uppercase">Cat Energy&nbsp<br class="br__mobile"> PRO<br class="br__tablet"> 1000 г</h3>
           <picture>
             <source media="(min-width: 708px)" srcset="../img/card_img/chicken_1000_tablet.png, ../img/card_img/chicken_1000_tablet@2x.png 2x">
             <img class="card__img card__big" width="84" height="101" src="../img/card_img/chicken_1000_mobile.png" srcset="../img/card_img/chicken_1000_mobile@2x.png 2x" alt="со вкусом курицы">
@@ -121,8 +130,8 @@
           </button>
         </li>
 
-        <li class="card__item">
-          <h3 class="card__title uppercase">Cat Energy<br class="br__mobile"> PRO<br class="br__tablet"> 500 г</h3>
+        <li class="list card__item">
+          <h3 class="card__title uppercase">Cat Energy&nbsp<br class="br__mobile"> PRO<br class="br__tablet"> 500 г</h3>
           <picture>
             <source media="(min-width: 708px)" srcset="../img/card_img/fish_500_tablet.png, ../img/card_img/fish_500_tablet@2x.png 2x">
             <img class="card__img card__small" width="68" height="86"  src="../img/card_img/fish_500_mobile.png" srcset="../img/card_img/fish_500_mobile@2x.png 2x" alt="со вкусом рыбы">
@@ -146,8 +155,8 @@
           </button>
         </li>
 
-        <li class="card__item">
-          <h3 class="card__title uppercase">Cat Energy<br class="br__mobile"> PRO<br class="br__tablet"> 1000 г</h3>
+        <li class="list card__item">
+          <h3 class="card__title uppercase">Cat Energy&nbsp<br class="br__mobile"> PRO<br class="br__tablet"> 1000 г</h3>
           <picture>
             <source media="(min-width: 708px)" srcset="../img/card_img/fish_1000_tablet.png, ../img/card_img/fish_1000_tablet@2x.png 2x">
             <img class="card__img card__big" width="84" height="101" src="../img/card_img/fish_1000_mobile.png" srcset="../img/card_img/fish_1000_mobile@2x.png 2x" alt="со вкусом рыбы">
@@ -171,8 +180,8 @@
           </button>
         </li>
 
-        <li class="card__item">
-          <h3 class="card__title uppercase">Cat Energy<br class="br__mobile"> slim<br class="br__tablet"> 500 г</h3>
+        <li class="list card__item">
+          <h3 class="card__title uppercase">Cat Energy&nbsp<br class="br__mobile"> slim<br class="br__tablet"> 500 г</h3>
           <picture>
             <source media="(min-width: 708px)" srcset="../img/card_img/buckwheat_500_tablet.png, ../img/card_img/buckwheat_500_tablet@2x.png 2x">
             <img class="card__img card__small" width="68" height="86"  src="../img/card_img/buckwheat_500_mobile.png" srcset="../img/card_img/buckwheat_500_mobile@2x.png 2x" alt="со вкусом гречки">
@@ -196,8 +205,8 @@
           </button>
         </li>
 
-        <li class="card__item">
-          <h3 class="card__title uppercase">Cat Energy<br class="br__mobile"> slim<br class="br__tablet"> 1000 г</h3>
+        <li class="list card__item">
+          <h3 class="card__title uppercase">Cat Energy&nbsp<br class="br__mobile"> slim<br class="br__tablet"> 1000 г</h3>
           <picture>
             <source media="(min-width: 708px)" srcset="../img/card_img/buckwheat_1000_tablet.png, ../img/card_img/buckwheat_1000_tablet@2x.png 2x">
             <img class="card__img card__big" width="84" height="101" src="../img/card_img/buckwheat_1000_mobile.png" srcset="../img/card_img/buckwheat_1000_mobile@2x.png 2x" alt="со вкусом гречки">
@@ -221,8 +230,8 @@
           </button>
         </li>
 
-        <li class="card__item">
-          <h3 class="card__title uppercase">Cat Energy<br class="br__mobile"> slim<br class="br__tablet"> 500 г</h3>
+        <li class="list card__item">
+          <h3 class="card__title uppercase">Cat Energy&nbsp<br class="br__mobile"> slim<br class="br__tablet"> 500 г</h3>
           <picture>
             <source media="(min-width: 708px)" srcset="../img/card_img/rice_500_tablet.png, ../img/card_img/rice_500_tablet@2x.png 2x">
             <img class="card__img card__small" width="68" height="86"  src="../img/card_img/rice_500_mobile.png" srcset="../img/card_img/rice_500_mobile@2x.png 2x" alt="со вкусом риса">
@@ -246,7 +255,7 @@
           </button>
         </li>
 
-        <li class="card__item">
+        <li class="list card__item">
           <svg xmlns="http://www.w3.org/2000/svg" class="card__img" width="30" height="30" viewBox="0 0 30 30" fill="none">
             <line x1="15" x2="15" y2="30" stroke="#D3D3D3" stroke-width="2"/>
             <line x1="30" y1="15" y2="15" stroke="#D3D3D3" stroke-width="2"/>
@@ -265,7 +274,7 @@
 
       <div class="additional__container">
         <ul class="additional__list">
-          <li class="additional__item">
+          <li class="list additional__item">
             <h3 class="additional__card--title uppercase">Сахарозаменитель</h3>
             <p class="additional__spec">
               <span class="additional__spec--title">1 упаковка (100 г)</span>
@@ -275,7 +284,7 @@
               <span class="additional__button--text button__text">заказать</span>
             </button>
           </li>
-          <li class="additional__item">
+          <li class="list additional__item">
             <h3 class="additional__card--title uppercase">питьевая вода</h3>
             <p class="additional__spec">
               <span class="additional__spec--title">5 литров</span>
@@ -285,7 +294,7 @@
               <span class="additional__button--text button__text">заказать</span>
             </button>
           </li>
-          <li class="additional__item">
+          <li class="list additional__item">
             <h3 class="additional__card--title uppercase">молоко</h3>
             <p class="additional__spec">
               <span class="additional__spec--title">1 литр</span>
@@ -295,7 +304,7 @@
               <span class="additional__button--text button__text">заказать</span>
             </button>
           </li>
-          <li class="additional__item">
+          <li class="list additional__item">
             <h3 class="additional__card--title uppercase">витамины</h3>
             <p class="additional__spec">
               <span class="additional__spec--title">1 упаковка (30 г)</span>
@@ -332,28 +341,50 @@
     </picture>
 
     <div class="social__contacts">
-      <a class="footer__logo" href="index.html">
+      <a class="link footer__logo" href="index.html">
         <svg class="footer__logo--item" width="128" height="24">
           <use href="/img/sprite.svg#logo__sign"></use>
         </svg>
       </a>
 
       <ul class="social">
-        <li class="social__item">
-          <a class="social__link visually-hidden" href="#">VK</a>
+        <li class="list social__item">
+          <a class="link social__link" href="#">
+            <svg class="social__link--item vk" width="23" height="16">
+              <use xlink:href="./img/sprite.svg#vk"></use>
+            </svg>
+          </a>
         </li>
-        <li class="social__item">
-          <a class="social__link visually-hidden" href="#">Instagram</a>
+
+        <li class="list social__item">
+          <a class="link social__link" href="#">
+            <svg class="social__link--item instagram" width="16" height="16">
+              <use xlink:href="./img/sprite.svg#instagram"></use>
+            </svg>
+          </a>
         </li>
-        <li class="social__item">
-          <a class="social__link visually-hidden" href="#">Facebook</a>
+
+        <li class="list social__item">
+          <a class="link social__link" href="#">
+            <svg class="social__link--item facebook" width="22" height="22">
+              <use xlink:href="./img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
         </li>
       </ul>
 
-      <div class="academy__links">
-        <a class="academy__link" href="">HTML Academy</a>
-        <a class="academy__link--img" href="#">
-          <img class="academy-img" width="27" height="34" src="../img/icons/academy-logo.svg" alt="Логотип Академии">
+      <div class="academy__link--container">
+        <a class="link academy__link" href="#">
+          <svg class="academy__brand--mobile" width="114" height="18">
+            <use xlink:href="./img/sprite.svg#brand__html--mobile"></use>
+          </svg>
+          <svg class="academy__logo--mobile" width="27" height="34">
+            <use xlink:href="./img/sprite.svg#logo__html--mobile"></use>
+          </svg>
+
+          <svg class="academy__logo" width="163" height="34">
+            <use xlink:href="./img/sprite.svg#logo__html"></use>
+          </svg>
         </a>
       </div>
     </div>

@@ -1,0 +1,192 @@
+
+.advantages {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+}
+
+.advantages__item {
+  min-height: 266px;
+  margin: 20px;
+  padding: 0 20px;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  position: relative;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "title cat"
+    "desc cat"
+    "link cat";
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
+
+  &:last-child {
+    .advantages__title {
+      margin-left: 39px;
+    }
+  }
+}
+
+.advantages__title {
+  margin: 30px 0 29px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+  position: relative;
+
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: $font-weight-normal;
+
+  @media (min-width: $tablet-width) {
+    grid-area: title;
+    justify-content: start;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+  }
+}
+
+.advantages__description {
+  margin: 0 33px 0 0;
+  min-width: 227px;
+
+  font-family: $font-family-lato;
+  color: $dark-grey;
+  line-height: 18px;
+  word-spacing: 0.12em;
+
+  @media (min-width: $tablet-width) {
+    grid-area: desc;
+    width: 340px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.advantages__link {
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  min-width: 100%;
+  margin: 42px 0 18px -1px;
+  position: relative;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: link;
+
+    font-size: 20px;
+  }
+}
+
+.advantages__link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -20px;
+  border-top: 1px solid #d9d9d9;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    border: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.advantages__link {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 101px;
+    width: 24px;
+    height: 12px;
+    background-image: url("../img/icons/arrow.svg");
+    background-size: 32px 12px;
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+
+  &:last-child {
+    &::after {
+      left: 99px;
+    }
+  }
+}
+
+.cat__sit {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 21px;
+  left: 22px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: cat;
+    width: 200px;
+    height: 211px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 106px;
+
+    position: absolute;
+    content: "";
+    display: block;
+    top: 5px;
+    right: 270px;
+  }
+}
+
+.cat__back {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 24px;
+  left: 13px;
+
+  @media (min-width: $tablet-width) {
+    width: 268px;
+    height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    height: 100px;
+
+    position: absolute;
+    content: "";
+    display: block;
+    top: 10px;
+    left: 10px;
+  }
+}

@@ -67,9 +67,9 @@
   }
 }
 
-.nav__link--logo:nth-child(2) {
+.link__logo--sign {
   padding: 0;
-  margin: 23px 0;
+  margin: 24px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,20 +87,63 @@
   }
 }
 
-.nav__img {
+.nav__sign {
+  margin-top: -1px;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-.nav__desktop {
-  @media (min-width: $mobile-width) {
-    display: none;
-  }
+.nav__tablet {
+  display: none;
 
   @media (min-width: $tablet-width) {
+    content: "";
     display: block;
-    margin-top: -50px;
+    position: absolute;
+    top: 24px;
+    left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.nav__desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 53px;
+    left: 110px;
+  }
+}
+
+.link__logo--desktop {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.link__logo--tablet {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -122,14 +165,27 @@
     flex-direction: row;
     min-width: 478px;
     z-index: 1;
+  }
+}
 
-    .nav__link {
-      color: $black;
-    }
+.nav__item {
+  &:nth-child(1) {
+    letter-spacing: 0.04em;
+    margin-top: 3px;
+  }
 
-    .nav__main {
+  &:nth-child(2) {
+    letter-spacing: 0.04em;
+    margin-left: -2px;
+  }
+
+  &:nth-child(3) {
+    letter-spacing: 0.04em;
+    margin-left: -1px;
+  }
+
+  @media (min-width: $desktop-width) {
       color: $white;
-    }
   }
 }
 
@@ -147,7 +203,7 @@
 
   @media (min-width: $desktop-width) {
     color: $white;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: $font-weight-normal;
     line-height: 24px;
   }
@@ -168,8 +224,8 @@
   position: absolute;
   content: "";
   display: block;
-  top: 10px;
-  right: 20px;
+  top: 12px;
+  right: 10px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -221,7 +277,7 @@
     display: block;
     top: 10px;
     right: 10px;
-    width: 20px;
+    width: 20px; 
     height: 20px;
     background-image: url("../img/icons/close.svg");
   }
@@ -233,7 +289,7 @@
 
   .nav__list:last-child {
     position: absolute;
-    top: 64px;
+    top: 62px;
     left: auto;
     z-index: 1;
     background-color: #ffffff;
@@ -275,8 +331,6 @@
 }
 
 .header {
-  border-bottom: 1px solid #d9d9d9;
-
   @media (min-width: $tablet-width) {
     padding: 20px 30px;
     border-bottom: none;

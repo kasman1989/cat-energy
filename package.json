@@ -5,7 +5,7 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.3.1",
-    "browser-sync": "2.27.5",
+    "browser-sync": "^2.27.5",
     "cheerio": "1.0.0-rc.10",
     "del": "6.0.0",
     "gulp": "4.0.2",
@@ -31,8 +31,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp build",
-    "start": "gulp"
+    "build": "node --max-old-space-size=16384 node_modules/gulp/bin/gulp.js build",
+    "start": "node --max-old-space-size=16384 node_modules/gulp/bin/gulp.js"
   },
   "browserslist": [
     "last 2 versions",

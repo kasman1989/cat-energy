@@ -1,0 +1,141 @@
+.additional__list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 0;
+  }
+}
+
+.additional__item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  gap: 20px;
+  position: relative;
+  border-bottom: 1px solid #cdcdcd;
+
+  &:first-child {
+    border-top: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    padding: 26px 38px;
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    border-left: none;
+    border-right: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+}
+
+.additional__button {
+  @media (min-width: $tablet-width) {
+    grid-column: span 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: span 1;
+  }
+}
+
+.additional__title {
+  position: relative;
+  display: block;
+  min-width: 378px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: $font-weight-normal;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    top: 60%;
+    left: 240px;
+    width: 100%;
+    height: 2px;
+    background: #68b738;
+    z-index: -1;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+    margin: 20px -20px;
+    margin-left: 37px;
+    width: 338px;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    background-color: #ffffff;
+
+    &::after {
+      width: 100vw;
+      left: -57px;
+    }
+
+    &::before {
+      border-top: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -20px;
+
+    &::after {
+      left: -147px;
+    }
+  }
+}
+
+.additional__card--title {
+  color: $darken-grey;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: $font-weight-normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.additional__spec {
+  color: $dark-grey;
+  font-family: $font-family-lato;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    column-gap: 50px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.additional__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
